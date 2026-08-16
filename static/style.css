@@ -1,0 +1,134 @@
+:root {
+  --fg: #1a1a1a;
+  --muted: #8a8a8a;
+  --line: #e8e8e8;
+  --link: #06c;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  color: var(--fg);
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC",
+    "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+header, main, footer {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 头部 */
+header { padding-top: 64px; padding-bottom: 24px; }
+header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+header h1 a { color: var(--fg); text-decoration: none; }
+.subtitle {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 8px 0 0;
+}
+
+/* 年份分组列表 */
+main { padding-bottom: 40px; }
+.year { margin-bottom: 40px; }
+.year h2 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.year .count {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 15px;
+}
+.year ul { list-style: none; margin: 0; padding: 0; }
+.year li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 7px 0;
+}
+.year time {
+  color: var(--muted);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.year a { color: var(--fg); text-decoration: none; }
+.year a:hover { text-decoration: underline; }
+.cat {
+  color: var(--muted);
+  font-size: 13px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* 单篇正文 */
+.post-title {
+  font-size: 26px;
+  line-height: 1.4;
+  margin: 48px 0 10px;
+}
+.meta {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 44px;
+}
+.meta .cat { margin-left: 10px; }
+.content { font-size: 17px; }
+.content p { margin: 1.5em 0; }
+.content h2 { font-size: 21px; margin: 2em 0 0.6em; }
+.content h3 { font-size: 18px; margin: 1.8em 0 0.5em; }
+.content a { color: var(--link); }
+.content blockquote {
+  margin: 1.5em 0;
+  padding: 0.2em 0 0.2em 1em;
+  border-left: 3px solid var(--line);
+  color: #555;
+}
+.content code {
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: #f5f5f5;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+.content pre {
+  background: #f5f5f5;
+  padding: 14px 16px;
+  border-radius: 4px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+.content pre code { background: none; padding: 0; }
+.content img { max-width: 100%; height: auto; }
+
+/* 页脚 */
+footer {
+  color: var(--muted);
+  font-size: 14px;
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+footer a { color: var(--muted); }
+
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .year li { flex-wrap: wrap; gap: 6px 12px; }
+}

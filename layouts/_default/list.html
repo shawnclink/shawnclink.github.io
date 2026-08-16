@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ range .Pages.GroupByDate "2006" }}
+<section class="year">
+  <h2>{{ .Key }} <span class="count">({{ len .Pages }})</span></h2>
+  <ul>
+    {{ range .Pages }}
+    <li>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ range .Params.categories }}<span class="cat">{{ . }}</span>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}

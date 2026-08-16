@@ -1,0 +1,9 @@
+baseURL = 'https://shawnclink.github.io/'
+locale = 'zh-cn'
+title = '开源自我'
+
+[params]
+  subtitle = '真心永远垂直于时间'
+
+[permalinks]
+  posts = '/posts/:slug/'
