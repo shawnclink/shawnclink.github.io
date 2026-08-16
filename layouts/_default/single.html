@@ -3,8 +3,8 @@
 <article>
   <h1 class="post-title">{{ .Title }}</h1>
   <div class="meta">
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "2006-01-02 15:04" }}</time>
-    {{ range .Params.categories }}<span class="cat">{{ . }}</span>{{ end }}
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "2006年1月2日" }}</time>
+    {{ range .Params.categories }}<span class="cat">({{ . }})</span>{{ end }}
   </div>
   <div class="content">
     {{ .Content }}

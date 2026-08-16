@@ -5,9 +5,9 @@
   <ul>
     {{ range .Pages }}
     <li>
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01月02日" }}<span class="sep"> ：</span></time>
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ range .Params.categories }}<span class="cat">{{ . }}</span>{{ end }}
+      {{ range .Params.categories }}<span class="cat">({{ . }})</span>{{ end }}
     </li>
     {{ end }}
   </ul>

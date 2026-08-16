@@ -1,8 +1,8 @@
 :root {
-  --fg: #1a1a1a;
+  --fg: #16181a;
   --muted: #8a8a8a;
   --line: #e8e8e8;
-  --link: #06c;
+  --link: #146bb7;
 }
 
 * { box-sizing: border-box; }
@@ -13,10 +13,10 @@ body {
   margin: 0;
   color: var(--fg);
   background: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC",
-    "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "PingFang SC",
+    "Noto Sans SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
   font-size: 17px;
-  line-height: 1.75;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -29,6 +29,7 @@ header, main, footer {
 /* 头部 */
 header { padding-top: 64px; padding-bottom: 24px; }
 header h1 {
+  font-family: "Catamaran", "PingFang SC", "Noto Sans SC", sans-serif;
   font-size: 28px;
   font-weight: 700;
   margin: 0;
@@ -45,6 +46,7 @@ header h1 a { color: var(--fg); text-decoration: none; }
 main { padding-bottom: 40px; }
 .year { margin-bottom: 40px; }
 .year h2 {
+  font-family: "Catamaran", "PingFang SC", "Noto Sans SC", sans-serif;
   font-size: 19px;
   font-weight: 600;
   margin: 0 0 8px;
@@ -60,7 +62,7 @@ main { padding-bottom: 40px; }
 .year li {
   display: flex;
   align-items: baseline;
-  gap: 14px;
+  gap: 8px;
   padding: 7px 0;
 }
 .year time {
@@ -74,13 +76,14 @@ main { padding-bottom: 40px; }
 .year a:hover { text-decoration: underline; }
 .cat {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   margin-left: auto;
   flex-shrink: 0;
 }
 
 /* 单篇正文 */
 .post-title {
+  font-family: "Catamaran", "PingFang SC", "Noto Sans SC", sans-serif;
   font-size: 26px;
   line-height: 1.4;
   margin: 48px 0 10px;
@@ -130,5 +133,5 @@ footer a { color: var(--muted); }
 
 @media (max-width: 480px) {
   body { font-size: 16px; }
-  .year li { flex-wrap: wrap; gap: 6px 12px; }
+  .year li { flex-wrap: wrap; gap: 6px 8px; }
 }
