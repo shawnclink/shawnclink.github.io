@@ -1,8 +1,9 @@
 :root {
-  --fg: #16181a;
-  --muted: #8a8a8a;
-  --line: #e8e8e8;
-  --link: #146bb7;
+  --fg: #141413;       /* Anthropic 暖黑 */
+  --muted: #6b6b68;    /* 暖灰(日期/次要) */
+  --line: #e8e6dc;     /* 米白边框 */
+  --link: #c6613f;     /* 陶土赭(强调) */
+  --bg: #faf9f5;       /* 羊皮纸暖白 */
 }
 
 * { box-sizing: border-box; }
@@ -12,10 +13,10 @@ html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
   color: var(--fg);
-  background: #fff;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "PingFang SC",
-    "Noto Sans SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
-  font-size: 17px;
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC",
+    "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  font-size: 18px;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
@@ -29,7 +30,6 @@ header, main, footer {
 /* 头部 */
 header { padding-top: 64px; padding-bottom: 24px; }
 header h1 {
-  font-family: "Catamaran", "PingFang SC", "Noto Sans SC", sans-serif;
   font-size: 28px;
   font-weight: 700;
   margin: 0;
@@ -46,7 +46,6 @@ header h1 a { color: var(--fg); text-decoration: none; }
 main { padding-bottom: 40px; }
 .year { margin-bottom: 40px; }
 .year h2 {
-  font-family: "Catamaran", "PingFang SC", "Noto Sans SC", sans-serif;
   font-size: 19px;
   font-weight: 600;
   margin: 0 0 8px;
@@ -83,7 +82,6 @@ main { padding-bottom: 40px; }
 
 /* 单篇正文 */
 .post-title {
-  font-family: "Catamaran", "PingFang SC", "Noto Sans SC", sans-serif;
   font-size: 26px;
   line-height: 1.4;
   margin: 48px 0 10px;
@@ -94,7 +92,12 @@ main { padding-bottom: 40px; }
   margin-bottom: 44px;
 }
 .meta .cat { margin-left: 10px; }
-.content { font-size: 17px; }
+
+/* 正文 = 衬线(Anthropic 的"精装书"感),中文对应宋体 */
+.content {
+  font-family: "Songti SC", "Noto Serif SC", "Source Serif 4", Georgia, serif;
+  font-size: 18px;
+}
 .content p { margin: 1.5em 0; }
 .content h2 { font-size: 21px; margin: 2em 0 0.6em; }
 .content h3 { font-size: 18px; margin: 1.8em 0 0.5em; }
@@ -103,17 +106,17 @@ main { padding-bottom: 40px; }
   margin: 1.5em 0;
   padding: 0.2em 0 0.2em 1em;
   border-left: 3px solid var(--line);
-  color: #555;
+  color: #5e5d59;
 }
 .content code {
   font-family: "SF Mono", Menlo, Consolas, monospace;
   font-size: 0.9em;
-  background: #f5f5f5;
+  background: #f0eee6;
   padding: 0.1em 0.35em;
   border-radius: 3px;
 }
 .content pre {
-  background: #f5f5f5;
+  background: #f0eee6;
   padding: 14px 16px;
   border-radius: 4px;
   overflow-x: auto;
