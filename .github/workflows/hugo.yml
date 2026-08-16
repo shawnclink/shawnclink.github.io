@@ -24,6 +24,8 @@ jobs:
       - uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
+      - name: Build
+        run: hugo --minify
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
